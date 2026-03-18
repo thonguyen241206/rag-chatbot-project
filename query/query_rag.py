@@ -1,8 +1,9 @@
-from rag.rag_chatbot import ask_rag
-
-while True:
-    q = input("Ask: ")
-    if q == "exit":
-        break
-
-    print(ask_rag(q))
+from rag.rag_chatbot import ask_rag 
+print("RAG Chatbot Ready") 
+while True: 
+    query = input("\nAsk: ") 
+    if query.lower() == "exit": 
+        break 
+    answer = ask_rag(query) 
+    print("\nAnswer:\n") 
+    print(answer)
